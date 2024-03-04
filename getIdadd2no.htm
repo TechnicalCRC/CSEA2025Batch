@@ -1,0 +1,32 @@
+<!-- Example of getElementByID - add of 2 number -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> getElementByID- Add of 2 num</title>
+</head>
+
+<body>
+  <input type="text" id="txt1">
+  <input type="text" id="txt2">
+  <button onclick="add()">Add</button>
+  <p id="p1">Result Here : </p>
+  <script>
+    function add() {
+      let a = document.getElementById('txt1').value;
+      let b = document.getElementById('txt2').value;
+
+      let result = document.getElementById('p1');
+
+      let c = Number(a) + Number(b);
+
+      result.innerText += c;
+      //console.log(Number(a)+Number(b));
+
+    }
+  </script>
+</body>
+
+</html>
