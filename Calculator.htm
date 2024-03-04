@@ -1,0 +1,44 @@
+<!-- Calculator (+, -, *, /, %, **)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div style="border: 2px solid black; padding: 10px; width: 200px;">
+    <h1>Calculator</h1>
+    Enter First No <br> <input type="text" id="txt1"> <br><br>
+    Enter Second No <br><input type="text" id="txt2"><br>
+    <br>
+    <button onclick="cal('+')">+</button>
+    <button onclick="cal('-')">-</button>
+    <button onclick="cal('*')">*</button>
+    <button onclick="cal('/')"> /</button>
+    <button onclick="cal('%')">%</button>
+    <button onclick="cal('**')">**</button>
+    <h3 id="p1">Result Here : </h3>
+  </div>
+  <script>
+    function cal(op) {
+      let a = document.getElementById('txt1').value;
+      let b = document.getElementById('txt2').value;
+      let result = document.getElementById('p1');
+
+      switch (op) {
+        case '+': c = Number(a) + Number(b); break;
+        case '-': c = Number(a) - Number(b); break;
+        case '*': c = Number(a) * Number(b); break;
+        case '/': c = Number(a) / Number(b); break;
+        case '%': c = Number(a) % Number(b); break;
+        case '**': c = Number(a) ** Number(b); break;
+      }
+      result.innerText = "Result Here : " + c;
+    }
+  </script>
+</body>
+
+</html>
