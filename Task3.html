@@ -1,0 +1,31 @@
+<!-- Task 3 - Draw 3 CSS Design Button & calculate item in bag -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Task 3 - Draw 3 CSS Design Button & calculate item in bag</title>
+</head>
+
+<body>
+  <button style="background-color: rgb(47, 255, 241);
+                 border: 0px;
+                 border-radius: 8px; "
+    onclick="document.getElementById('bag').innerText=`Your bag has ${++counter} items`"> Add to Bag </button>
+
+  <button style="border-radius: 10px;
+                 padding-left: 30px;
+                 padding-right: 30px;"
+    onclick="document.getElementById('bag').innerText=`Your bag has ${--counter} items`">❤️ Move to Whishlist</button>
+  <button style="background-color: rgb(47, 255, 241);
+                 border: 0px;
+                 border-radius: 8px;" onclick="counter+=2;
+  document.getElementById('bag').innerText=`Your bag has ${counter} items`">
+    Add 1+1 sale item</button>
+
+  <h1 id="bag">Your bag has 0 items</h1>
+  <script>
+    let counter = 0;
+  </script>
+</body>
+
+</html>
