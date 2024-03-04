@@ -1,0 +1,23 @@
+<!-- print table of a num by different button click on console  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Table by diff button</title>
+</head>
+
+<body>
+  <button onclick="table(2)">2 table</button><br>
+  <button onclick="table(5)">5 table</button><br>
+  <button onclick="table(10)">10 table</button><br>
+  <button onclick="table(9)">9 table</button>
+  <script>
+    function table(num) {
+      // let num = 6;
+      for (let i = 1; i <= 10; i++)
+        console.log(`${num} x ${i} = ${num * i}`);
+    }
+  </script>
+</body>
+
+</html>
