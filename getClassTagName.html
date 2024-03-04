@@ -1,0 +1,45 @@
+<!-- getElementByClassName, getElementByTagName, getElementByName Example -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  Class
+  <button onclick="display()">Click</button>
+  <p class="p1">Para 1 Data</p>
+  <p class="p2">Para 2 Data</p>
+  <h3 class="p2">Heading 3 Data</h3>
+  <p class="p1">Para 3 Data</p>
+
+  <input type="text" name="t1">
+  <input type="text" name="t1">
+  <input type="text" name="t1">
+
+  <script>
+    function display() {
+      // getElementByClassName
+      //      let data = document.getElementsByClassName('p2');
+      //    for(let i=0;i<data.length;i++)
+      //      console.log(data[i].innerText);
+
+
+      //  getElementByTagName
+      //      let data = document.getElementsByTagName('p');
+      //    for(let i=0;i<data.length;i++)
+      //      console.log(data[i].innerText);
+
+
+      // getElementByName
+      let data = document.getElementsByName('t1');
+      for (let i = 0; i < data.length; i++)
+        console.log(data[i].value);
+
+    }
+  </script>
+
+</body>
+
+</html>
