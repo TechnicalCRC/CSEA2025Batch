@@ -1,0 +1,27 @@
+<!-- Example of getElementsByClassName - display para data -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getElementsByClassName - display para data</title>
+</head>
+
+<body>
+  <button onclick="display()"> Click Me </button>
+  <p class="p1"> Text Here for Para 1 </p>
+
+  <p class="p3"> Text here for para 2 </p>
+  <p class="p1"> Text here for para 3 </p>
+  <script>
+    function display() {
+      let value = document.getElementsByClassName('p1');
+
+      for (let i = 0; i < value.length; i++)
+        console.log(value[i].innerText);
+    }
+  </script>
+</body>
+
+</html>
