@@ -1,4 +1,4 @@
-// print basic msg, warning msg, error msg on console
+// print basic msg, warning msg, error msg on console 
 
 console.log("Hello in my Webpage");
 console.log("New in JS");
