@@ -1,0 +1,22 @@
+<!-- getElementById Example - display para on button click -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>getElementById Example - display para on button click</title>
+</head>
+<body>
+  <button onclick="display()">Click</button>
+  <p id="p1">Para 1 Data</p>
+  <p id="p2">Para 2 Data</p>
+  
+  <script>
+    function display(){
+      let data = document.getElementById('p1');
+      console.log(data.innerText);
+      data = document.getElementById('p2');
+      console.log(data.innerText);
+    }
+  </script>
+  
+</body>
+</html>
