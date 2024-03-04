@@ -1,0 +1,37 @@
+<!-- queryselector by tagname(p), class(.), id(#) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>querySelector (p, ., #)</title>
+</head>
+<body>
+  <h1>queryselector</h1>
+  <button onclick="funid()">id show</button>
+  <button onclick="funclass()">class show</button>
+  <button onclick="funtag()">tag show</button>
+  <p id="p1">Para 1 Data by id</p>
+  <p class="c1">Para 2 Data by class</p>
+  <p class="c1">Para 3 Data by class</p>
+  <h5>heading 5 Data by tag</h5>
+    
+  <script>
+    function funid(){
+     let data = document.querySelector('#p1').innerText;
+      console.log(data);
+    }
+    function funclass(){
+      let data = document.querySelector('.c1').innerText;
+      console.log(data);
+       data = document.querySelectorAll('.c1')[0].innerText;
+      console.log(data);
+       data = document.querySelectorAll('.c1')[1].innerText;
+      console.log(data);
+    }
+    function funtag(){
+     let data = document.querySelector('h5').innerText;
+      console.log(data);
+    }
+
+  </script>
+</body>
+</html>
