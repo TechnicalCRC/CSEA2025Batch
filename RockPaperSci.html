@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+  Rock Paper Scissors Game
+  <br>
+  <button onclick="rps('Rock')">Rock</button><br>
+  <button onclick="rps('Paper')">Paper</button><br>
+  <button onclick="rps('Scissor')">Scissors</button><br>
+  <script>
+    function rps(user){
+      let computer = Math.floor(Math.random()*3 + 1);
+      let compval;
+      if(computer==1)
+       compval = 'Rock';
+      else if(computer==2)
+       compval='Paper';
+      else if(computer==3)
+       compval='Scissor';
+
+      console.log(user);
+      console.log(compval);
+
+      if(user == compval)
+        alert('Its a Tie');
+      else if(user=='Rock' && compval=='Paper' || user=='Paper' && compval=='Scissor' || user=='Scissor' && compval=='Rock')
+      alert('computer wins');
+    else
+     alert('User wins');
+    }
+  </script>
+</body>
+</html>
