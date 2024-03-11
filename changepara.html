@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="p1" onclick="change()"> This is Para Text</p>
+  <button onclick="change()">Click to change style </button>
+  <button onclick="change1()">Click to remove style </button>
+  <button onclick="change2()">click for text change</button>
+  <script>
+    function change() {
+      let para = document.querySelector("#p1");
+      para.setAttribute('style', 'color:red;border:2px dotted blue;background-color:orange;');
+    }
+    function change1() {
+      let para = document.getElementById("p1");
+      para.setAttribute('style', '');
+    }
+    function change2() {
+      //document.getElementById('p1').innerText = "Hello Here 2";
+      p1.innerText = "Hello here 1";
+    }
+  </script>
+</body>
+
+</html>
