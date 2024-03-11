@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>String Methods</title>
+</head>
+
+<body>
+  <script>
+    // String Methods
+    let str = 'Ramesh';
+    console.log(str);
+
+    // charAt()
+    console.log(str.charAt(2));
+    console.log(str.charAt(4));
+
+    // concat()
+    console.log(str.concat(" Kumar"));
+
+    // match - matches the string, if not found then null
+    console.log(str.match('e'));
+    console.log(str.match('me'));
+    console.log(str.match('eh')); // if no match return null
+
+    // search - search the string and return position, if not found then -1 
+    console.log(str.search('m')); // 2
+    console.log(str.search('s')); // 4
+    console.log(str.search('d')); // -1
+
+    // lower
+    console.log(str.toLowerCase());
+
+    // slice - start include, end exclude
+    console.log(str.slice(2));//mesh
+    console.log(str.slice(0));//Ramesh
+    console.log(str.slice(2, 5));//mes 
+
+    // substr - start, length
+    console.log(str.substr(2, 2));
+    console.log(str.substr(2, 4));
+
+    // substring - start, end(ex)
+    console.log(str.substring(2, 3));
+    console.log(str.substring(2, 4));
+
+
+  </script>
+</body>
+
+</html>
