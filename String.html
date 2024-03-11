@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>String</title>
+</head>
+
+<body>
+  <script>
+    let str = 'This is new String';
+    console.log(str);
+    console.log('Length = ' + str.length);
+
+    let str1 = "String by variable"; // normal string creation
+    let str2 = new String('String by Constructor'); // string creation by new keyword
+    // like in java 'normal' string store to 'stack' and using 'new' store in 'Heap'  
+
+    console.log(str1);
+     console.log(str2);
+
+     let str3 = new String(str1);
+     console.log(str3);
+
+     let val1 = '2+4'; // str by variable // normal
+     let val2 = new String('3+5'); // str by constructor
+
+     // diff bet normal & new keyword in string creation 
+     console.log(eval(val1)); // normal str // 6
+     console.log(eval(val2)); // by constructor // '3+5'
+
+     // 1st way - typecasting to String
+     console.log(eval(String(val2))); // type casting to String then behave like normal string // 8
+
+     // 2nd way - valueOf() Method 
+     console.log(eval(val2.valueOf()));
+  </script>
+</body>
+
+</html>
