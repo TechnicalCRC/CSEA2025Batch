@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn1" onclick="roll()">Click to Roll</button>
+  <br>
+  <img src="pic/dice1.gif" alt="" width="100px" onclick="roll1()">
+  <h3 id="h3"></h3>
+  <img src="pic/dice1.gif" id="img1" width="150px" onclick="roll2()">
+  <script>
+    function roll(){
+ //     console.log(Math.floor(Math.random()*6+1));
+ let btnid = document.getElementById("btn1");
+ btnid.innerText = Math.floor(Math.random()*6)+1;
+    }
+    function roll1(){
+ let btnid = document.getElementById("h3");
+ btnid.innerText = Math.floor(Math.random()*6)+1;
+    }
+    function roll2(){
+ let btnid = document.getElementById("img1");
+ let val = Math.floor(Math.random()*6)+1;
+ btnid.setAttribute('src',`pic/${val}.png`);
+    }
+  </script>
+</body>
+</html>
