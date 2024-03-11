@@ -1,0 +1,37 @@
+<!-- function expression -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    function multiple(num) {
+      return num * num;
+    }
+    console.log(multiple(4));
+
+
+    // Function Hoisting 
+    console.log(mul(5));
+
+    function mul(num, num1 = 4) {
+      return num * num1;
+    }
+
+    //function expression
+    let add = function (num, num1) {
+      return num + num1;
+    }
+    console.log(add(2, 5));
+
+
+  </script>
+</body>
+
+</html>
