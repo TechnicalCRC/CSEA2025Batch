@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    b {
+      border: 2px solid rgb(224, 174, 11);
+      margin: 10px;
+    }
+  </style>
+  <title>Todo App</title>
+</head>
+
+<body>
+
+  <h1 style="text-align: center;"> Todo App</h1>
+  <hr>
+  Enter Todo
+  <input type="text" id="todotxt">
+  <input type="date" id="tododate">
+  <button onclick="addToDo()">Add Todo</button>
+  <hr>
+  <!-- This is DOM Div Parent Container -->
+  <div id="todocontainer"></div>
+  <script>
+    //for counting the tasks
+    let counter = 0;
+
+    function addToDo() {
+      //main parent container
+      let parent = document.createElement('p');
+
+      //  3 child like text,date,delete button
+      let todoTxt = document.createElement('b'); // for b - bold tag CSS set in head tag
+      let todoDate = document.createElement('b');
+      let todoBtn = document.createElement('button');
+
+      //set todo value from textBox to todoTxt container
+      todoTxt.innerText = document.querySelector("#todotxt").value;
+
+      //set todo date from textBox to todoDate container
+      todoDate.innerText = document.querySelector("#tododate").value;
+
+      //assigning unique id to every created parent
+      let unique_id = 'p' + (++counter);
+      parent.setAttribute('id', unique_id);
+
+      //set Delete button text to parent container
+      todoBtn.innerText = 'Delete';
+
+      // Setting onclick event to delete button
+
+      // remove element by id in DOM -- remove() function
+//      todoBtn.setAttribute('onclick', `removeEle(${unique_id})`);
+
+      // remove element by parent Node -- removeChild() function
+  //      todoBtn.setAttribute('onclick', `removeEle('${unique_id}')`);
+
+      // to remove element 3rd method -- shortcut ( now we don't need removeEle())
+      todoBtn.setAttribute('onclick', `${unique_id}.remove()`);
+
+
+      //setting border style to Parent container -- you can set CSS here or set in Head tag
+      parent.style.border = "3px solid Black";
+
+
+      // adding child like todo text, date, button to Parent container
+      parent.appendChild(todoTxt);
+      parent.appendChild(todoDate);
+      parent.appendChild(todoBtn);
+
+      // adding Parent container to Div (todocontainer) parent container
+      document.querySelector("#todocontainer").appendChild(parent);
+    }
+
+    function removeEle(id) {
+      // for tesing purpose
+//      alert("delete function called  " + id.innerText);
+
+    // this is example of remove() to remove any element by its unique id
+//     id.remove();  
+
+     // now use removeChild() to remove the child
+     document.getElementById(id).parentNode.removeChild(document.getElementById(id));
+}
+  </script>
+
+</body>
+
+</html>
