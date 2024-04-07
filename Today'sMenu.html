@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todat's Menu - Dinner</title>
+</head>
+<body>
+  <h3>Todat's Menu - Dinner Prediction</h3>
+
+  <button onclick="dinner()">Predict Your Choice</button>
+<h2 id="din"></h2>
+  <script>
+    let menu=['Rajma-Chawal','Chole-Bhature','Kadhi-Chawal', 'Makhni Dal-Naan', 'Chawmin', 'Paw-Bhaji', 'Puri-Sabji', 'Idli-sambhar', 'Dosa-sambhar', 'vada-sambhar', 'Pani-puri', 'Tikki', 'Samosa', 'Pizza', 'Panner-Tikka','Palag-Panner'];
+
+    function dinner(){
+      let val = Math.floor(Math.random()*menu.length);
+
+      din.innerText = menu[val];
+    }
+  </script>
+  
+</body>
+</html>
