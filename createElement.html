@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Create Element</title>
+</head>
+
+<body>
+  Enter Data
+  <input type="text" id="txt1">
+  <button onclick="addEle()">Add dynamic content</button>
+
+  <!-- Div DOM Container -->
+  <div id="pdiv"></div>
+  <script>
+
+    function addEle() {
+      //Create Ele
+      let ele = document.createElement('p');
+
+      // Assign Data
+      ele.innerText = txt1.value;
+
+      // Add to Div DOM Container
+      document.querySelector("#pdiv").appendChild(ele);
+    }
+
+  </script>
+
+</body>
+
+</html>
