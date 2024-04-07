@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Array</title>
+</head>
+
+<body>
+  <script>
+    let arr = [1, 2, 3, 4];
+
+    console.log(arr);
+    console.log(arr[1]);
+
+    let names = ['Ram', 'Ramesh', 'Shyam', 'vipin', 'Shiva'];
+
+    console.log(names);
+    console.log(names[3]);
+
+    // Sum of Array
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++)
+      sum += arr[i];
+
+    console.log("sum = " + sum);
+    console.log('sum = ' + sum);
+    console.log(`sum = ${sum}`);
+
+    let arr1 = [2, 4, 6, 9];
+
+    console.log(arr1);
+    let arr2 = arr1;   // ref Copy // pass by ref
+    arr2[1] = 20;
+    console.log(arr1);
+
+
+    let arr3 = [...arr1];  // data Copy // pass by value
+    arr3[0] = 100;
+
+    console.log(arr1);
+    console.log(arr3);
+
+    // spread 
+    console.log(Math.max(...arr1));
+
+  </script>
+</body>
+
+</html>
