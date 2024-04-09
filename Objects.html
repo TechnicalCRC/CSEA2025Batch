@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Objects</title>
+</head>
+
+<body>
+  <script>
+    // object syntex in JS
+    /// let obj = {key:value} // single property
+    /// let obj = { // multiple property
+    //   key1:value1,
+    //   key2:value2,
+    // ...
+    // }
+
+    let person = { name: 'Ram' };
+
+    // display the object
+    console.log(person);
+
+    // display the object property - name
+    // getting value
+    console.log(person.name);
+
+    // setting value - modify
+    person.name = 'shyam';
+    console.log(person.name);
+
+    // add property to obj
+    person.age = 12;
+
+    console.log(person);
+    console.log(person.age);
+    console.log(person['name']); // undefine
+    console.log(person['name']);
+
+    // bird object
+    // object can have behavior
+    // functions - methods
+    let bird = {
+      'bird name': 'parrot',
+      color: 'green',
+      'age': 2,
+      fly: function () {
+        console.log('Bird can fly....');
+      },
+      eat: function () {
+        console.log('Bird can eat green chilli..');
+      }
+    }
+
+    console.log(bird.color); // access by .
+    console.log(bird['color']); // access by []
+    console.log(bird['bird name']);
+
+    // accesss by loop
+    // display keys of bird
+    for (let i in bird)
+      console.log(i);
+
+    console.log('Bird Data:');
+    // display values of bird
+    for (let i in bird)
+      console.log(i + " : " + bird[i]);
+
+    for (let i in bird)
+      console.log(`${i} : ${bird[i]}`);
+
+    console.log(bird.color);
+    console.log(bird.fly);
+    bird.fly();
+    bird.eat();
+
+
+    // object can have child or sub objects
+    // 2-D Objects
+
+    let car = {
+      model: 'Maruti',
+      make: 2022,
+      color: {
+        1: 'red',
+        2: 'green',
+        3: 'white'
+      }
+    }
+
+    // Object Destructuring
+
+    let obj = {
+      name: 'Ram',
+      age: 23
+    };
+
+    let { name, age } = obj; // object destructure
+
+    console.log(obj.name);
+     console.log(name);
+
+     console.log(obj.age);
+    console.log(age);
+    
+    // coping object - cloning
+    // spread operator
+    // pass by value
+    let obj1 = {...obj};
+     console.log(obj);
+    obj1.name = 'shyam';
+    console.log(obj); // no effect in original Object
+    
+    //coping ref
+    // pass by ref
+
+    let obj2 = obj;
+    console.log(obj);
+    obj2.name = 'Ramesh'
+    console.log(obj); // change affected
+  </script>
+</body>
+
+</html>
