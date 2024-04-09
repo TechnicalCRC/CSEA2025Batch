@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Map</title>
+</head>
+<body>
+  <script>
+    let num = [1,2,3,4];
+    let sq = function(n){
+      return n*n;
+    } 
+    let square_num = num.map((n)=>{return n*n}); // can call any type of function - normal, fun expression, anonymous function
+
+    console.log(num);
+    console.log(square_num);
+
+    // filter()
+
+    let num2 = num.filter((n)=>{
+      return n%2; // return odd number 
+     });
+
+     console.log(num2);
+
+     let num3 = num.filter((n)=>{
+      return n%2==0; // return even number 
+     });
+     console.log(num3);
+
+  </script>
+</body>
+</html>
