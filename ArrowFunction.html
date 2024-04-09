@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arrow Function</title>
+</head>
+<body>
+   <script>
+     // Normal Function
+     function add(a,b){
+      return a+b;
+     }
+     console.log(add(3,4));
+
+     // function Expression
+     let sub = function(a,b){
+      return a-b;
+     }
+     console.log(sub(45,7));
+
+     // Arrow Function
+     let mul = (a,b)=>{
+      return a*b;
+     }
+     console.log(mul(4,7));
+     
+     // Arrow Function
+     // if multi-line statements - use { }
+     let mul1 = (a,b)=>{
+      let c = a*b;
+      return c;
+     }
+     console.log(mul1(41,7));
+
+      // Arrow Function
+      // if single line statement - shorthand
+      let div = (a,b)=>a/b;
+     console.log(div(14,7));
+
+     // square of a number
+      let square = (num)=> num*num;
+      console.log(square(5));
+
+      // callback function - display() calling square() 
+      let display=(n)=>square(n);
+      console.log(display(20));
+
+   </script>
+  
+</body>
+</html>
