@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Table - Create Element by objects</title>
+</head>
+<body>
+  Click on Button to add Data to Table
+  <button onclick="addData()">Click</button>
+  <div>
+    <fieldset>
+      <legend>Student Data</legend>
+      <table id="t1" border="">
+          <tr>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Marks</th>
+          </tr>
+      </table>
+    </fieldset>
+  </div>
+  
+  <script>
+    let Student = {
+      1:{name:'Deepak', branch:'CSE', marks:254},
+      2:{name:'Harsh', branch:'AI', marks:251},
+      3:{name:'Chetan', branch:'DS', marks:651},
+      4:{name:'Ravi', branch:'IOT', marks:151},
+      5:{name:'Akshay', branch:'IT', marks:51}
+    }
+    console.log(Student);
+
+    function addData(){
+      for(let i in Student)
+      {
+        // parent dynamic row
+        let trow = document.createElement("tr");
+
+        // creating 3 dynamic cell - td
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+
+        // add data to td's cell
+        td1.innerHTML =  Student[i]['name'];
+        td2.innerHTML =  Student[i]['branch'];
+        td3.innerHTML =  Student[i]['marks'];
+
+        // adding td's to parent table row - trow
+        trow.append(td1);
+        trow.append(td2);
+        trow.append(td3);
+
+        // adding dynamic row to table 
+        document.querySelector('#t1').append(trow);
+      }
+    }
+  </script>
+</body>
+</html>
