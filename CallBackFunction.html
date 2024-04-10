@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Call Back Function</title>
+</head>
+<body>
+<p id="p1"></p>
+<script>
+   // normal function calling
+  //  function firstFun(){
+  //   console.log('this is first');
+  //  } 
+  //  function secondFun(){
+  //   console.log('this is second');
+  //  } 
+
+  //  // normal function calling sequence
+  //  secondFun();
+  //  firstFun();
+
+  // call back 2 example
+  // function callback(callbackfunc)
+  // {
+  //   console.log('i am callback function...');
+  //   callbackfunc();
+  // }
+  // function callme(){
+  //    console.log('i m call me function..')
+  // }
+  // function callyou(){
+  //    console.log('i m call you function..')
+  // }  
+  //callback(callme);
+ // callback(callyou);
+
+  // function add(a,b){
+  //   let c = a+b;
+  //   display_res(c);
+  // }
+  // function display_res(res)
+  // {
+  //   console.log(res);
+  // }
+
+  // add(23,12,);
+    
+  // callback 3 example
+  // let add = (a,b)=>console.log(a+b);
+  // let sub = (a,b)=>console.log(a-b);
+  // let mul = (a,b)=>console.log(a*b);
+
+  // function display_res(a,b, manipulate)
+  // {
+  //  console.log("Result after processing is");
+  //  // calling callback function as argu pass
+  //  manipulate(a,b);
+  // }
+
+  // display_res(12,5,add);// passing function as argument
+  // display_res(12,5,sub);
+  // display_res(12,5,mul);
+
+  // callback 4 example
+  // use a array - show even or odd by callback function
+
+  // let isEven = (val)=>val%2==0; // check even numbers
+  // let isOdd = (val)=>val%2!=0; // check odd numbers
+
+  // let display_res = (arr1,callback)=>{
+  //      let res_arr = arr1.filter(callback); // calling callback function
+  //      console.log(res_arr);
+  // }
+  // let arr = [1,2,3,4,5,7,12,34];
+  // display_res(arr,isEven); // passing isEven() function as an argu 
+  // display_res(arr,isOdd); // passing isOdd() function as an argu
+
+   // callback 5 example
+   // settimeout()
+   
+   function showTime()
+   {
+    let date = new Date();
+    //console.log(date);
+    p1.innerHTML = `Current Date is - <b>${date.getDate()}/${date.getMonth()}/${date.getFullYear()}</b> <br><br> Current Time is - <b> ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} </b>`;
+    setTimeout(showTime,1000);// unit - ms - milisecond
+   }
+   showTime();
+
+</script>
+</body>
+</html>
