@@ -1,40 +1,41 @@
+import AppName from "./Components/AppName";
+import AppInput from "./Components/AppInput";
+import TodoItem2 from "./Components/TodoItem2";
+import TodoItem1 from "./Components/TodoItem1";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
+let ListItems = ['BBA','BCA','BA','B.Com','B.Sc'];
+
   return (
-    <center>
-      <h1>Todo App</h1>
-      <div className="row">
-        <div className="col-6"><input type="text" /></div>
-        <div className="col-4">
-          <input type="date" />
-        </div>
-        <div className="col-2">
-          <button className="btn btn-success">Add</button>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-6">Buy Mobile Phone</div>
-        <div className="col-4">
-          29-4-2024
-        </div>
-        <div className="col-2">
-          <button className="btn btn-danger">Delete</button>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-6">Buy Milk Phone</div>
-        <div className="col-4">
-          29-4-2024
-        </div>
-        <div className="col-2">
-          <button className="btn btn-danger">Delete</button>
-        </div>
-      </div>
-    </center>
+    <>
+      <h1>Course List</h1>
+      <ul className="list-group">
+        {ListItems.map((course) => <li className="list-group-item">
+          {course}</li>)}
+
+
+      </ul>
+    </>
   );
 }
+
 export default App;
+
+// function App() {
+//   return (
+//     <center>
+//       <AppName></AppName>
+//       <AppInput></AppInput>
+//       <div className="todo-item-container">
+//       <TodoItem1></TodoItem1>
+//       <TodoItem2></TodoItem2>
+//       </div>
+//     </center>
+//   );
+// }
+// export default App;
 
 // import Hello from "./Hello";
 // import MyButton from "./MyButton";
