@@ -4,7 +4,9 @@
   <title>Call Back Function</title>
 </head>
 <body>
-<p id="p1"></p>
+  <p id="p1">Shyam</p>
+  <p id="p2">Ram</p>
+  <p id="p3"></p>
 <script>
    // normal function calling
   //  function firstFun(){
@@ -76,15 +78,45 @@
 
    // callback 5 example
    // settimeout()
-   
-   function showTime()
-   {
-    let date = new Date();
-    //console.log(date);
-    p1.innerHTML = `Current Date is - <b>${date.getDate()}/${date.getMonth()}/${date.getFullYear()}</b> <br><br> Current Time is - <b> ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} </b>`;
-    setTimeout(showTime,1000);// unit - ms - milisecond
-   }
-   showTime();
+   // Show Date & Time using setTimeOut() 
+  //  function showTime()
+  //  {
+  //   let date = new Date();
+  //   //console.log(date);
+  //   p1.innerHTML = `Current Date is - <b>${date.getDate()}/${date.getMonth()}/${date.getFullYear()}</b> <br><br> Current Time is - <b> ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} </b>`;
+  //   setTimeout(showTime,1000);// unit - ms - milisecond
+  //  }
+  //  showTime();
+let flag=0;
+  function ss(){
+    let d = new Date();
+    //console.log(d);
+    p3.innerHTML = d;
+    if(flag==0)
+    {
+
+      document.querySelector('#p2').style.backgroundColor = 'white';
+      document.querySelector('#p1').style.backgroundColor = 'Red';
+
+     flag=1;
+    }
+    else
+    {
+      document.querySelector('#p1').style.backgroundColor = 'white';
+     document.querySelector('#p2').style.backgroundColor = 'Green';
+     flag=0;
+    }
+    
+//      setInterval(ss,2000);    
+  }
+//setInterval(ss,1000);
+ // ss();
+ setInterval(ss,1000);    
+
+
+  // callback problem - callback hell
+  // 
+
 
 </script>
 </body>
